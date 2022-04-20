@@ -138,7 +138,7 @@ try {
 	}
 	cout << "Matrix:\n" << ms << endl;
 
-
+	return 0;
 
 
 } catch(exception& e){
