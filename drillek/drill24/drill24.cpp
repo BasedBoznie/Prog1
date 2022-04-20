@@ -143,6 +143,8 @@ try {
 
 } catch(exception& e){
 	cerr << "Exception: " << e.what() << endl;
+	return 1;
 } catch(...){
 	cerr << "Unknown exception" << endl;
+	return 2;
 }
