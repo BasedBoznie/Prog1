@@ -52,7 +52,7 @@ void RemoveByIid(T& container, int iidToRemove){
 int main(){
 try{
 	vector<Item> vi;
-	ifstream ifs {"input_items.txt"};
+	ifstream ifs {"itemvector.txt"};
 	if (!ifs){
 		throw runtime_error("Could not read from file."); 
 	}
@@ -96,7 +96,7 @@ try{
 	//////////////////////////////////////////////////////
 
 	list<Item> li;
-	ifstream iifs {"input_items.txt"};
+	ifstream iifs {"itemvector.txt"};
 	for(Item d; iifs >> d;){
 		li.push_back(d);
 	}
@@ -121,13 +121,13 @@ try{
 	cout << "\nAz elemek:" << endl;
 	print(li.begin(), li.end());
 
-	RemoveByName(li, "asanyi");
-	RemoveByName(li, "viego");
+	RemoveByName(li, "Bonzie");
+	RemoveByName(li, "NoggerFogger");
 	cout << "\nAz elemek:" << endl;
 	print(li.begin(), li.end());
 
-	RemoveByIid(li, 99);
-	RemoveByIid(li, 6);
+	RemoveByIid(li, 20);
+	RemoveByIid(li, 41);
 	cout << "\nAz elemek:" << endl;
 	print(li.begin(), li.end());
 
