@@ -13,11 +13,11 @@ class Less_than {
 };
 
 template<typename C>
-void print(const C& c, char sep = '\n'){
+void print(const C& c){
 	std::cout<<"Container elements:\n";
 	
 	for(const auto elem : c){
-		std::cout << elem << sep;
+		std::cout << elem << '\n';
 	}
 	std::cout << std::endl;
 }
