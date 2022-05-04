@@ -5,12 +5,7 @@
 #include <numeric>
 #include <algorithm>
 
-class Less_than {
-	double v;
-	public:
-		Less_than(double vv) : v(vv) {}
-		bool operator()(const double val) {return val < v;}
-};
+
 
 template<typename C>
 void print(const C& c){
@@ -60,11 +55,6 @@ try{
 			vd2.push_back(d);
 		}
 	}
-	
-	/*std::vector<double> vd2(vd.size());
-	
-	auto it = std::copy_if(vd.begin(), vd.end(), vd2.begin(), Less_than(vd_mean));
-	vd2.resize(std::distance(vd2.begin(), it));*/
 	
 	print(vd2);
 	
