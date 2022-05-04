@@ -6,9 +6,9 @@
 
 
 
-template<typename K, typename V>
-void print(const std::map<K,V>& m) {
-for(const auto& a : m) { //(std::pair<K,V>& a : m)
+
+void print(const std::map<std::string, int>& m) {
+for(const auto& a : m) {
 std::cout << a.first << '\t' << a.second << std::endl;
 }
 }
@@ -24,10 +24,9 @@ m[s] = i; //ez is jó
 }
 }
 
-template<typename K, typename V>
-void mapsum(const std::map<K,V>& m) {
+void mapsum(const std::map<std::string, int>& m) {
 int sum = 0;
-for(const auto& a : m) { //(std::pair<K,V>& a : m)
+for(const auto& a : m) {
 sum = sum+a.second;
 }
 std::cout << "\nA map <int> értékeinek összege: \n" << sum << std::endl;
@@ -66,18 +65,6 @@ std::cout << "\nA megadott map: \n";
 print(msi);
 
 mapsum(msi); //
-
-/*
-int total = std::accumulate(msi.begin(), msi.end(), 0,
-[](int sum, const sstd::pair<std::string, int>& p)
-{return sum += p.second;}
-);
-
-int sum = 0;
-for(std::pair<string, int> a : msi) { //(std::pair<K,V>& a : m)
-sum = sum+a.second;
-}
-*/
 
 std::map<int,std::string> mis;
 
