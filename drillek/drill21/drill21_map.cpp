@@ -7,8 +7,9 @@
 
 
 
-void print(const std::map<std::string, int>& m) {
-for(const auto& a : m) {
+template<typename K, typename V>
+void print(const std::map<K,V>& m) {
+for(const auto& a : m) { //(std::pair<K,V>& a : m)
 std::cout << a.first << '\t' << a.second << std::endl;
 }
 }
